@@ -1,25 +1,25 @@
 # 🔍 Audit AI: Intelligent Financial Compliance Engine
 
-### 📋 Visão Geral
-Uma solução de auditoria impulsionada por IA, concebida para transformar a fiscalização financeira tradicional, passando da **amostragem manual** para uma **cobertura de 100% do razão contábil**.
-Esta ferramenta preenche a lacuna entre a **Deteção Estatística de Anomalias** e o **Raciocínio Semântico**, utilizando uma abordagem híbrida para identificar inconsistências contabilísticas, fraudes potenciais e violações de conformidade que passariam despercebidas por auditores humanos.
+### 📋 Overview
+An AI-driven auditing solution designed to transform traditional financial oversight from **manual sampling** to **100% ledger coverage**. 
+This tool bridges the gap between **Statistical Anomaly Detection** and **Semantic Reasoning**, using a hybrid approach to identify accounting inconsistencies, potential fraud, and compliance breaches that human auditors might miss.
 
-### 🚀 Funcionalidades Principais
-*   **Cobertura de Transações a 100%:** Supera o método tradicional de amostragem manual (geralmente 5%) ao analisar cada lançamento de diário de um ano fiscal em segundos.
-*   **Reconciliação Semântica (LLM):** Utiliza **GPT-4/LLMs** para cruzar as descrições das transações com os códigos contabilísticos, detetando "anomalias contextuais" (ex: uma descrição de "Material de Escritório" atribuída a uma conta de "Investimento de Capital").
-*   **Deteção Estatística de Outliers:** Implementa algoritmos de **Isolation Forest** e **Z-Score** para sinalizar valores numéricos atípicos, horários de transação invulgares ou padrões de arredondamento suspeitos (Lei de Benford).
-*   **Pista de Auditoria Explicável:** Em vez de alertas de "caixa negra", o sistema gera justificações em linguagem natural para cada risco sinalizado, permitindo que os auditores entendam *por que* um lançamento específico foi considerado suspeito.
-*   **Barreiras de Conformidade (Guardrails):** Verificações automáticas contra normas contabilísticas específicas (SNC/IFRS), sinalizando lançamentos manuais não autorizados ou aplicações inconsistentes de IVA.
+### 🚀 Key Features
+* **100% Transaction Coverage:** Moves beyond the traditional 5% manual sampling method by analyzing every single journal entry in a fiscal year within seconds.
+* **Semantic Reconciliation (LLM):** Utilizes **GPT-4/LLMs** to cross-reference transaction descriptions with accounting codes, detecting "contextual anomalies" (e.g., an "Office Supply" description assigned to a "Capital Investment" account).
+* **Statistical Outlier Detection:** Implements **Isolation Forest** and **Z-Score** algorithms to flag numerical outliers, unusual transaction hours, or suspicious rounding patterns (Benford’s Law).
+* **Explainable Audit Trail:** Instead of "Black Box" alerts, the system generates natural language justifications for every flagged risk, allowing auditors to understand *why* a specific entry was deemed suspicious.
+* **Compliance Guardrails:** Automated checks against specific accounting standards (SNC/IFRS), flagging unauthorized manual overrides or inconsistent VAT applications.
 
-### 🛠️ Stack Tecnológica
-*   **Core:** Python 3.10+
-*   **IA/LLM:** OpenAI API (GPT-4), LangChain
-*   **Machine Learning:** Scikit-Learn (Isolation Forest), Statsmodels
-*   **Processamento de Dados:** Pandas, NumPy
-*   **Frontend/UI:** Streamlit (Audit Dashboard)
-*   **Testes:** Pytest (para validação de lógica financeira)
+### 🛠️ Tech Stack
+* **Core:** Python 3.10+
+* **AI/LLM:** OpenAI API (GPT-4), LangChain
+* **Machine Learning:** Scikit-Learn (Isolation Forest), Statsmodels
+* **Data Engineering:** Pandas, NumPy
+* **Frontend/UI:** Streamlit (Audit Dashboard)
+* **Testing:** Pytest (for financial logic validation)
 
-### 📊 Metodologia: A Abordagem Híbrida
-1.  **Filtro Quantitativo:** O motor executa primeiro uma análise estatística para encontrar "agulhas no palheiro" numérico com base em distribuições históricas.
-2.  **Filtro Qualitativo:** Os lançamentos sinalizados são enviados para um agente de LLM para avaliar a *lógica* da transação com base no contexto do negócio.
-3.  **Human-in-the-loop:** Os auditores revisam o dashboard de "Alto Risco", confirmando ou descartando alertas, o que refina a precisão futura do modelo.
+### 📊 Methodology: The Hybrid Approach
+1. **Quantitative Filter:** The engine first runs a statistical pass to find numerical "needles in the haystack" based on historical distributions.
+2. **Qualitative Filter:** Flagged entries are sent to the LLM agent to evaluate the *logic* of the transaction based on business context and accounting rules.
+3. **Human-in-the-loop:** Auditors review the "High Risk" dashboard, confirming or dismissing alerts, which refines the model's future precision.
